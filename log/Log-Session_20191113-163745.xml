@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Wed Nov 13 16:37:46 CET 2019" lastAction="(Offer  bid:Bid[Food: Handmade Food, Drinks: Non-Alcoholic, Location: Your Dorm, Invitations: Custom, Printed, Music: MP3, Cleanup: Specialized Materials])" domain="etc/templates/partydomain/party_domain.xml" bids="120" runtime="0.342693749" finalOutcome="-" startingAgent="BoulwareNegotiationParty@0" deadline="60rounds">
+<resultsOfAgent agent="BoulwareNegotiationParty@0" agentDesc="Time-based agent" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="boa-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Bidder-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Acceptor_a_b-negotiator.boaframework.opponentmodel.AgentLGModel-negotiator.boaframework.omstrategy.NTFTstrategy@1" agentDesc="BOA(Acceptor,Bidder,AgentLG Model,Offer Best Bids)" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="genius.core.repository.boa.BoaPartyRepItem$1" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Fri Nov 22 09:10:24 CET 2019" lastAction="(Offer  bid:Bid[Number of Wind Turbines: larger than 120, less than or equal to 140, Price Per Wind Turbine: very cheap, Sound: nearly slient, Spacing: as close as possible, Size Of Wind Turbines: average size of wind turbines around the world, Onshore or Offshore: offshore, Material: glass fiber])" domain="etc/templates/ANAC2016/Maxoops/WindFarm.xml" bids="120" runtime="0.523356508" finalOutcome="-" startingAgent="JonnyBlack@6" deadline="60rounds">
+<resultsOfAgent agent="JonnyBlack@6" agentDesc="ANAC2015" utilspace="etc/templates/ANAC2016/Maxoops/WindFarm_util1.xml" agentClass="agents.anac.y2015.JonnyBlack.JonnyBlack" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="boa-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Bidder-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Acceptor-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.OM-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Strategist@7" agentDesc="BOA(Acceptor,Bidder,AI-(19-20)-Group18-OpponentModel,Strategist)" utilspace="etc/templates/ANAC2016/Maxoops/WindFarm_util2.xml" agentClass="genius.core.repository.boa.BoaPartyRepItem$1" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>

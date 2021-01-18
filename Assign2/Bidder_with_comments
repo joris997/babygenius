@@ -1,0 +1,267 @@
+package ai2019.group18;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+
+import genius.core.Bid;
+import genius.core.bidding.BidDetails;
+import genius.core.boaframework.*;
+
+
+
+
+
+public class Bidder extends OfferingStrategy{
+	 private static double MINIMUM_TARGET = 0.8;
+     // list containing all offers made by the opponent
+     private List<Double> theirOffers = new ArrayList<>();
+     private List<BidDetails> ourOffers = new ArrayList<>();
+     private BidDetails lastReceivedOffer;
+     private Bid lastSentOffer;
+     private OpponentModel opponentModel;
+     private OMStrategy omStrategy;
+     private NegotiationSession negotiationSessions;
+ 	 private SortedOutcomeSpace outcomespace;
+     private Random r = new Random();
+     private double lowerBound;
+     private double upperBound;
+     private double prevBidUtil;
+     private double prevTime = 0.0;
+     private int concCnt = 1;
+     
+     @Override
+     public void init(NegotiationSession negoSession, OpponentModel model, OMStrategy oms, 
+    		 Map<String, Double> parameters) throws Exception {
+    	 
+ 		super.init(negoSession, parameters);
+ 		
+ 		if (parameters.get("lowerBound") != null) {
+			this.lowerBound = parameters.get("lowerBound");
+ 		}
+		else {
+			this.lowerBound = 0.7;
+		}
+
+ 		if (parameters.get("upperBound") != null) {
+			this.upperBound = parameters.get("upperBound");
+ 		}
+		else {
+			this.upperBound = 0.8;
+		}
+ 		
+ 		outcomespace = new SortedOutcomeSpace(negoSession.getUtilitySpace());
+		negoSession.setOutcomeSpace(outcomespace);
+ 		
+ 		this.negotiationSessions = negoSession;
+ 		this.opponentModel = model;
+ 		this.omStrategy = oms;
+ 			
+ 	}
+     
+	@Override
+	public BidDetails determineOpeningBid() {
+		Bid newBid = generateBidLearning();
+		BidDetails b = new BidDetails(newBid, negotiationSessions.getUtilitySpace().getUtility(newBid));
+        return b;
+	}
+
+	@Override
+	public BidDetails determineNextBid() {
+		lastReceivedOffer = negotiationSessions.getOpponentBidHistory().getLastBidDetails();
+		
+		System.out.println(negotiationSessions.getTimeline().getTime());
+		if (lastReceivedOffer != null) {
+            Boolean conceding = checkOpponentConceding();
+            if (conceding) {
+                System.out.println("Opp conceding: " + conceding);
+                lastSentOffer = generateBidLying();
+                
+                BidDetails b = new BidDetails(lastSentOffer, negotiationSessions.getUtilitySpace().getUtility(lastSentOffer));
+                return b;
+            }
+            if (negotiationSessions.getTimeline().getTime() >= 0.95) {
+                lastSentOffer = generateBidLastChance();
+                
+                BidDetails b = new BidDetails(lastSentOffer, negotiationSessions.getUtilitySpace().getUtility(lastSentOffer));
+                return b;
+            }
+            if (negotiationSessions.getTimeline().getTime() >= 0.92) {
+                lastSentOffer = generateBidConceding();
+
+                BidDetails b = new BidDetails(lastSentOffer, negotiationSessions.getUtilitySpace().getUtility(lastSentOffer));
+                return b;
+            }
+        }
+		lastSentOffer = generateBidLearning();
+        BidDetails b = new BidDetails(lastSentOffer, negotiationSessions.getUtilitySpace().getUtility(lastSentOffer));
+        return b;
+	}
+
+	@Override
+	/**
+	 * Returns component name
+	 */
+	public String getName() {
+		return "Bidder";
+	}
+	
+	
+	/**
+	 * Determines if the opponent is conceding by checking if the current bid has appeared before. 
+	 * @return
+	 */
+	private boolean checkOpponentConceding() {
+			int horizon = getHorizon();
+            // determine average time per bid
+			/*if(negotiationSessions.getOwnBidHistory() != null) {
+				ourOffers.add(negotiationSessions.getOwnBidHistory().getLastBidDetails());
+			}
+			if(negotiationSessions.getOpponentBidHistory() != null) {
+				BidDetails oppBidDet = negotiationSessions.getOpponentBidHistory().getLastBidDetails();
+				
+				theirOffers.add(opponentModel.getBidEvaluation(oppBidDet.getBid()));
+			}*/
+            System.out.println("Horizon: " + horizon);
+            // check if the last received bid has changed w.r.t. previous bids
+            if (negotiationSessions.getOpponentBidHistory().size() > horizon+1) {
+            	//List<Double> lastHorizonOffers = theirOffers.subList(theirOffers.size()-(horizon+1), theirOffers.size()-2);
+                List<BidDetails> oppBids = negotiationSessions.getOpponentBidHistory().getHistory().subList(negotiationSessions.getOpponentBidHistory().size()-(horizon+1), negotiationSessions.getOpponentBidHistory().size() - 2);
+	            /*List<Double> oppBidUtils = new ArrayList<>();
+	            for(int i=0; i<oppBids.size(); i++) {
+	            	oppBidUtils.add(opponentModel.getBidEvaluation(oppBids.get(i).getBid()));
+	            }*/
+	            //List<BidDetails> lastHorizonOffers = oppBidUtilss.subList(0, oppBidUtils.size()-1);
+	        	return !oppBids.contains(negotiationSessions.getOpponentBidHistory().getHistory().get(negotiationSessions.getOpponentBidHistory().getHistory().size() - 1));
+            
+            }
+            return false;
+    }
+	
+	/**
+	 * Generates bids with step-by-step higher utility than the previous bids.
+	 * @return
+	 */
+	private Bid generateBidLying() {
+		Bid newBid;
+		
+		prevBidUtil = negotiationSessions.getOwnBidHistory().getLastBidDetails().getMyUndiscountedUtil();
+		double utility = prevBidUtil + 0.01;
+		newBid = negotiationSessions.getOutcomeSpace().getBidNearUtility(utility).getBid();
+		
+		System.out.println("Bid Util: " + negotiationSessions.getUtilitySpace().getUtility(newBid));
+		
+        //newBid = negotiationSession.getDomain().getRandomBid(r);
+        
+        return newBid;
+    }
+	
+	/**
+	 * Generates bids with a small concession speed
+	 * @return
+	 */
+	 private Bid generateBidConceding() {
+		Bid newBid;
+		
+		/*int steps = (int) Math.floor(0.08/getTPB());
+		System.out.println("Steps: " + steps);
+		
+		double ownPrevBid = ourOffers.get(ourOffers.size()-1).getMyUndiscountedUtil();
+		double oppPrevBid = theirOffers.get(theirOffers.size()-1);
+		
+		double conStep = (ownPrevBid - oppPrevBid)/steps;*/
+
+		prevBidUtil = negotiationSessions.getOwnBidHistory().getLastBidDetails().getMyUndiscountedUtil();
+		double utility = prevBidUtil - 0.005;
+		System.out.println("Conceding to: " + utility);
+		newBid = negotiationSessions.getOutcomeSpace().getBidNearUtility(utility).getBid();
+        return newBid;
+     }
+
+	 /**
+	  * Generates bids with a high concession speed
+	  * @return
+	  */
+     private Bid generateBidLastChance() {
+    	Bid newBid;
+
+    	/*int steps = (int) Math.floor(0.05/getTPB());
+		System.out.println("Steps: " + steps);
+		
+		double ownPrevBid = ourOffers.get(ourOffers.size()-1).getMyUndiscountedUtil();
+		double oppPrevBid = theirOffers.get(theirOffers.size()-1);
+		
+		double conStep = (ownPrevBid - oppPrevBid)/steps;*/
+
+ 		prevBidUtil = negotiationSessions.getOwnBidHistory().getLastBidDetails().getMyUndiscountedUtil();
+ 		double utility = prevBidUtil - 0.01;
+ 		System.out.println("Conceding to: " + utility);
+ 		newBid = negotiationSessions.getOutcomeSpace().getBidNearUtility(utility).getBid();
+        return newBid;
+     }
+     
+     /**
+      * Generates random bids between two thresholds
+      * @return
+      */
+     private Bid generateBidLearning() {
+         Bid newBid;
+         
+         // compute random bid within our threshold bounds
+         Random rUtil = new Random();
+         double randomUtil = lowerBound + (upperBound - lowerBound) * rUtil.nextDouble();
+         BidDetails newBidDetails = negotiationSessions.getOutcomeSpace().getBidNearUtility(randomUtil);
+         newBid = newBidDetails.getBid();
+         System.out.println("Util: " + newBidDetails.getMyUndiscountedUtil());
+         
+         if (newBid != null) {
+             return newBid;
+         }
+         else {
+             return negotiationSessions.getDomain().getRandomBid(r);
+         }
+     }
+     
+     /**
+      * Determines the size of the horizon in which opponent bids are observed
+      * @return
+      */
+     private int getHorizon() {
+    	 double timePerBid = getTPB();
+    	 // analyze conceding on 5 percent of total amount of bids
+         double concedingHorizon = 0.05;
+         // horizon in which we look at whether or not opponent is conceding
+         int horizon = (int) (concedingHorizon * (negotiationSessions.getTimeline().getTotalTime()/timePerBid));
+         
+         return horizon;
+     }
+     
+     /**
+      * Calculates the time required for making a single bid based off of the total amount of bids made
+      * and the current time
+      * @return
+      */
+     private double getTPB() {
+    	 
+    	 double timePerBid = negotiationSessions.getTimeline().getCurrentTime()/(negotiationSessions.getOpponentBidHistory().size() + negotiationSessions.getOwnBidHistory().size());
+    	 
+    	 return timePerBid;
+     }
+     
+     
+     @Override
+     /**
+      * Enables setting the parameters lowerBound and upperBound through the Genius GUI
+      */
+ 	 public Set<BOAparameter> getParameterSpec() {
+ 		Set<BOAparameter> set = new HashSet<BOAparameter>();
+ 		set.add(new BOAparameter("lowerBound", 0.7, "Lower Threshold"));
+ 		set.add(new BOAparameter("upperBound", 0.8, "Upper Threshold"));
+
+ 		return set;
+ 	}
+
+}

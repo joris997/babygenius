@@ -1,0 +1,4 @@
+1,1,0.25,ConcederNegotiationParty@2,(Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Custom, Handmade, Music: DJ, Cleanup: Specialized Materials])
+1,2,0.25,boa-C..Users.ana.NegoAssign.Assign2.bin.ai2019.group18.Bidder-negotiator.boaframework.acceptanceconditions.anac2010.AC_AgentK-negotiator.boaframework.opponentmodel.AgentLGModel-negotiator.boaframework.omstrategy.NTFTstrategy@3,(Offer  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+2,1,0.5,ConcederNegotiationParty@2,(Accept  bid:Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap])
+agreement,Bid[Food: Catering, Drinks: Handmade Cocktails, Location: Ballroom, Invitations: Custom, Printed, Music: Band, Cleanup: Water and Soap],0.5475,0.8658466797198494

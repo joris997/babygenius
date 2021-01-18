@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome exception="Failed to execute protocol: Execution failed of Rubick@1:java.lang.NullPointerException: null" currentTime="Sat Oct 12 18:13:15 CEST 2019" lastAction="(Offer  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Ballroom, Invitations: Photo, Music: MP3, Cleanup: Specialized Materials])" bids="3" runtime="0.025423823" deadline="3s">
+<resultsOfAgent agent="boa-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Bidder-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Acceptor_a_b-negotiator.boaframework.opponentmodel.AgentLGModel-negotiator.boaframework.omstrategy.NTFTstrategy" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="BoaPartyRepItem[newParty,BOA[boa(/home/none/Desktop/Java/babygenius2/out/production/babygenius2/ai2019/group18/Bidder.class),[]],BOA[boa(/home/none/Desktop/Java/babygenius2/out/production/babygenius2/ai2019/group18/Acceptor.class),[a=1.0, b=0.0]],BOA[boa(negotiator.boaframework.opponentmodel.AgentLGModel),[]],BOA[boa(negotiator.boaframework.omstrategy.NTFTstrategy),[]]]" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="Rubick" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="agents.anac.y2017.rubick.Rubick" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>

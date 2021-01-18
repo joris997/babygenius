@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Sat Nov 23 14:44:52 CET 2019" timeOfAgreement="0.9722121" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="2607" runtime="2.9000813" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap]" startingAgent="PonPokoAgent@2" deadline="3s">
+<resultsOfAgent agent="PonPokoAgent@2" agentDesc="ANAC2017" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="agents.anac.y2017.ponpokoagent.PonPokoAgent" finalUtility="0.9285654723948509" discountedUtility="0.9285654723948509" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="UncertaintyBOA@3" agentDesc="UncertaintyBOA" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="ai2019.group18.UncertaintyBOA" finalUtility="0.7848203133352915" discountedUtility="0.7848203133352915" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>

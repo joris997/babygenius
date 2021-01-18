@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<boaPartiesList>
+    <boaparties partyName="newParty">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/home/none/Desktop/Java/babygenius2/out/production/babygenius2/ai2019/group18/Bidder.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <parameters name="a" value="1.0"/>
+            <parameters name="b" value="0.0"/>
+            <item classpath="/home/none/Desktop/Java/babygenius2/out/production/babygenius2/ai2019/group18/Acceptor.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="negotiator.boaframework.opponentmodel.AgentLGModel"/>
+        </opponentModel>
+        <omStrategy>
+            <item classpath="negotiator.boaframework.omstrategy.NTFTstrategy"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="newParty_all_components">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="/home/none/Desktop/Java/babygenius2/out/production/babygenius2/ai2019/group18/Bidder.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="/home/none/Desktop/Java/babygenius2/out/production/babygenius2/ai2019/group18/Acceptor.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="/home/none/Desktop/Java/babygenius2/out/production/babygenius2/ai2019/group18/OM.class"/>
+        </opponentModel>
+        <omStrategy>
+            <item classpath="/home/none/Desktop/Java/babygenius2/out/production/babygenius2/ai2019/group18/Strategist.class"/>
+        </omStrategy>
+    </boaparties>
+</boaPartiesList>

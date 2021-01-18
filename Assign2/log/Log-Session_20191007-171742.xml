@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Mon Oct 07 17:17:45 CEST 2019" timeOfAgreement="0.8911786333333334" lastAction="(Accept  bid:Bid[Pie: a480])" domain="etc/templates/pie/pie_domain.xml" bids="2535" runtime="2.6339571" finalOutcome="Bid[Pie: a480]" startingAgent="BoulwareNegotiationParty@4" deadline="3s">
+<resultsOfAgent agent="BoulwareNegotiationParty@4" agentDesc="Time-based agent" utilspace="etc/templates/pie/pie_A.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" finalUtility="0.48" discountedUtility="0.48" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="boa-C..Users.ana.NegoAssign.Assign2.bin.ai2019.group18.Bidder-negotiator.boaframework.acceptanceconditions.anac2010.AC_AgentK-negotiator.boaframework.opponentmodel.AgentLGModel-negotiator.boaframework.omstrategy.NTFTstrategy@5" agentDesc="BOA(2010 - AgentK,Bidder,AgentLG Model,Offer Best Bids)" utilspace="etc/templates/pie/pie_B.xml" agentClass="genius.core.repository.boa.BoaPartyRepItem$1" finalUtility="0.52" discountedUtility="0.52" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>

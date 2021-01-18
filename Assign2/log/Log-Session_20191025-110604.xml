@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Fri Oct 25 11:06:06 CEST 2019" timeOfAgreement="0.8578487666666667" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap])" domain="etc/templates/partydomain/party_domain.xml" bids="2291" runtime="2.5397975" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Handmade Cocktails, Location: Party Room, Invitations: Custom, Printed, Music: MP3, Cleanup: Water and Soap]" startingAgent="PonPokoAgent@0" deadline="3s">
+<resultsOfAgent agent="PonPokoAgent@0" agentDesc="ANAC2017" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2017.ponpokoagent.PonPokoAgent" finalUtility="0.7849999999999999" discountedUtility="0.7849999999999999" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="boa-C..Users.stavy.eclipse.workspace.gitrepo.babygenius2.Assign2.bin.ai2019.group18.Bidder-C..Users.stavy.eclipse.workspace.gitrepo.babygenius2.Assign2.bin.ai2019.group18.Acceptor-negotiator.boaframework.opponentmodel.AgentLGModel-negotiator.boaframework.omstrategy.NTFTstrategy@1" agentDesc="BOA(Acceptor,Bidder,AgentLG Model,Offer Best Bids)" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="genius.core.repository.boa.BoaPartyRepItem$1" finalUtility="0.9285654723948509" discountedUtility="0.9285654723948509" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>

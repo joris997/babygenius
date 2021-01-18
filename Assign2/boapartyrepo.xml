@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<boaPartiesList>
+    <boaparties partyName="eg">
+        <properties/>
+        <biddingStrategy>
+            <parameters name="max" value="0.99"/>
+            <parameters name="min" value="0.0"/>
+            <parameters name="e" value="1.0"/>
+            <parameters name="k" value="0.0"/>
+            <item classpath="C:\Users\ana\Documents\University\Delft\Year 1\Quarter 1\Artificial Intelligence Techniques\Practical Assignments\A2\babygenius2\Assign2\bin\TimeDependent_Offering.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <parameters name="b" value="0.0"/>
+            <parameters name="a" value="1.0"/>
+            <item classpath="C:\Users\ana\Documents\University\Delft\Year 1\Quarter 1\Artificial Intelligence Techniques\Practical Assignments\A2\babygenius2\Assign2\bin\AC_Next.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <parameters name="l" value="0.2"/>
+            <item classpath="C:\Users\ana\Documents\University\Delft\Year 1\Quarter 1\Artificial Intelligence Techniques\Practical Assignments\A2\babygenius2\Assign2\bin\HardHeadedFrequencyModel.class"/>
+        </opponentModel>
+        <omStrategy>
+            <parameters name="t" value="1.1"/>
+            <item classpath="C:\Users\ana\Documents\University\Delft\Year 1\Quarter 1\Artificial Intelligence Techniques\Practical Assignments\A2\babygenius2\Assign2\bin\BestBid.class"/>
+        </omStrategy>
+    </boaparties>
+    <boaparties partyName="newParty">
+        <properties/>
+        <biddingStrategy>
+            <item classpath="C:\Users\ana\Documents\University\Delft\Year 1\Quarter 1\Artificial Intelligence Techniques\Practical Assignments\A2\babygenius2\Assign2\bin\ai2019\group18\Bidder.class"/>
+        </biddingStrategy>
+        <acceptanceStrategy>
+            <item classpath="C:\Users\ana\Documents\University\Delft\Year 1\Quarter 1\Artificial Intelligence Techniques\Practical Assignments\A2\babygenius2\Assign2\bin\ai2019\group18\Acceptor.class"/>
+        </acceptanceStrategy>
+        <opponentModel>
+            <item classpath="C:\Users\ana\Documents\University\Delft\Year 1\Quarter 1\Artificial Intelligence Techniques\Practical Assignments\A2\babygenius2\Assign2\bin\ai2019\group18\OM.class"/>
+        </opponentModel>
+        <omStrategy>
+            <item classpath="C:\Users\ana\Documents\University\Delft\Year 1\Quarter 1\Artificial Intelligence Techniques\Practical Assignments\A2\babygenius2\Assign2\bin\ai2019\group18\Strategist.class"/>
+        </omStrategy>
+    </boaparties>
+</boaPartiesList>

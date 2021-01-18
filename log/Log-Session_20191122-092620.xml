@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Fri Nov 22 09:26:21 CET 2019" timeOfAgreement="0.9672131147540983" lastAction="(Accept  bid:Bid[06-09: 0 kW,, 09-19: 0 kW,, 19-22: 0 kW,, 22-06: 0 kW,])" domain="etc/templates/ANAC2016/AgentLightSmartGrid/SmartEnergyGrid.xml" bids="116" runtime="0.964465658" finalOutcome="Bid[06-09: 0 kW,, 09-19: 0 kW,, 19-22: 0 kW,, 22-06: 0 kW,]" startingAgent="ClockworkAgent@2" deadline="60rounds">
+<resultsOfAgent agent="ClockworkAgent@2" agentDesc="ANAC2016 Considers time." utilspace="etc/templates/ANAC2016/AgentLightSmartGrid/SmartEnergyGrid_util1.xml" agentClass="agents.anac.y2016.clockworkagent.ClockworkAgent" finalUtility="0.5058239989977413" discountedUtility="0.5058239989977413" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="boa-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Bidder-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Acceptor-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.OM-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Strategist@3" agentDesc="BOA(Acceptor,Bidder,AI-(19-20)-Group18-OpponentModel,Strategist)" utilspace="etc/templates/ANAC2016/AgentLightSmartGrid/SmartEnergyGrid_util2.xml" agentClass="genius.core.repository.boa.BoaPartyRepItem$1" finalUtility="1.0" discountedUtility="1.0" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>

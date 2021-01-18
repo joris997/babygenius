@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Mon Oct 07 17:19:04 CEST 2019" timeOfAgreement="0.7142098333333333" lastAction="(Accept  bid:Bid[06-09: 0 kW,, 09-19: 0 kW,, 19-22: 100 kW,, 22-06: 0 kW,])" domain="etc/templates/ANAC2016/AgentLightSmartGrid/SmartEnergyGrid.xml" bids="2651" runtime="2.1394962" finalOutcome="Bid[06-09: 0 kW,, 09-19: 0 kW,, 19-22: 100 kW,, 22-06: 0 kW,]" startingAgent="BoulwareNegotiationParty@6" deadline="3s">
+<resultsOfAgent agent="BoulwareNegotiationParty@6" agentDesc="Time-based agent" utilspace="etc/templates/ANAC2016/AgentLightSmartGrid/SmartEnergyGrid_util1.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" finalUtility="0.8160150261638979" discountedUtility="0.8160150261638979" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="boa-C..Users.ana.NegoAssign.Assign2.bin.ai2019.group18.Bidder-negotiator.boaframework.acceptanceconditions.anac2010.AC_AgentK-negotiator.boaframework.opponentmodel.AgentLGModel-negotiator.boaframework.omstrategy.NTFTstrategy@7" agentDesc="BOA(2010 - AgentK,Bidder,AgentLG Model,Offer Best Bids)" utilspace="etc/templates/ANAC2016/AgentLightSmartGrid/SmartEnergyGrid_util2.xml" agentClass="genius.core.repository.boa.BoaPartyRepItem$1" finalUtility="0.7761239643974466" discountedUtility="0.7761239643974466" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>

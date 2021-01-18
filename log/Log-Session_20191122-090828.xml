@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Fri Nov 22 09:08:29 CET 2019" timeOfAgreement="0.14754098360655737" lastAction="(Accept  bid:Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Photo, Music: DJ, Cleanup: Specialized Materials])" domain="etc/templates/partydomain/party_domain.xml" bids="17" runtime="0.080835624" finalOutcome="Bid[Food: Chips and Nuts, Drinks: Beer Only, Location: Party Room, Invitations: Photo, Music: DJ, Cleanup: Specialized Materials]" startingAgent="TheFawkes@4" deadline="60rounds">
+<resultsOfAgent agent="TheFawkes@4" agentDesc="ANAC2012" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.anac.y2013.TheFawkes.TheFawkes" finalUtility="0.987486889482845" discountedUtility="0.987486889482845" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="boa-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Bidder-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Acceptor-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.OM-.home.none.Desktop.Java.babygenius2.out.production.babygenius2.ai2019.group18.Strategist@5" agentDesc="BOA(Acceptor,Bidder,AI-(19-20)-Group18-OpponentModel,Strategist)" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="genius.core.repository.boa.BoaPartyRepItem$1" finalUtility="0.31348718397467956" discountedUtility="0.31348718397467956" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>

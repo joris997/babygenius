@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Sun Oct 06 13:30:26 CEST 2019" lastAction="(Offer  bid:Bid[Food: Chips and Nuts, Drinks: Catering, Location: Your Dorm, Invitations: Custom, Handmade, Music: DJ, Cleanup: Special Equiment])" domain="etc/templates/partydomain/party_domain.xml" bids="1931" runtime="3.0000019" finalOutcome="-" startingAgent="TimeDependentAgentHardliner@2" deadline="3s">
+<resultsOfAgent agent="TimeDependentAgentHardliner@2" agentDesc="does not concede" utilspace="etc/templates/partydomain/party1_utility.xml" agentClass="agents.TimeDependentAgentHardliner" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+<resultsOfAgent agent="boa-C..Users.ana.NegoAssign.Assign2.bin.ai2019.group18.Bidder_lowerBound_upperBound-negotiator.boaframework.acceptanceconditions.anac2010.AC_AgentK-negotiator.boaframework.opponentmodel.AgentLGModel-negotiator.boaframework.omstrategy.NTFTstrategy@3" agentDesc="BOA(2010 - AgentK,Bidder,AgentLG Model,Offer Best Bids)" utilspace="etc/templates/partydomain/party2_utility.xml" agentClass="genius.core.repository.boa.BoaPartyRepItem$1" finalUtility="0.0" discountedUtility="0.0" discount="1.0">
+</resultsOfAgent>
+</NegotiationOutcome></Session>

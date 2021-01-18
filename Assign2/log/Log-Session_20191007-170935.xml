@@ -1,0 +1,7 @@
+<?xml version="1.0" ?><Session>
+<NegotiationOutcome currentTime="Mon Oct 07 17:09:37 CEST 2019" timeOfAgreement="0.7835260000000001" lastAction="(Accept  bid:Bid[Laptop: Macintosh, Harddisk: 80 Gb, External Monitor: 19'' LCD])" domain="etc/templates/anac/y2011/Laptop/laptop_domain.xml" bids="643" runtime="2.3278665" finalOutcome="Bid[Laptop: Macintosh, Harddisk: 80 Gb, External Monitor: 19'' LCD]" startingAgent="BoulwareNegotiationParty@0" deadline="3s">
+<resultsOfAgent agent="BoulwareNegotiationParty@0" agentDesc="Time-based agent" utilspace="etc/templates/anac/y2011/Laptop/laptop_buyer_utility.xml" agentClass="negotiator.parties.BoulwareNegotiationParty" finalUtility="0.725620106089855" discountedUtility="0.37068194623238443" discount="0.42441038">
+</resultsOfAgent>
+<resultsOfAgent agent="boa-C..Users.ana.NegoAssign.Assign2.bin.ai2019.group18.Bidder-negotiator.boaframework.acceptanceconditions.anac2010.AC_AgentK-negotiator.boaframework.opponentmodel.AgentLGModel-negotiator.boaframework.omstrategy.NTFTstrategy@1" agentDesc="BOA(2010 - AgentK,Bidder,AgentLG Model,Offer Best Bids)" utilspace="etc/templates/anac/y2011/Laptop/laptop_seller_utility.xml" agentClass="genius.core.repository.boa.BoaPartyRepItem$1" finalUtility="1.0" discountedUtility="0.5108387559677925" discount="0.42441038">
+</resultsOfAgent>
+</NegotiationOutcome></Session>
